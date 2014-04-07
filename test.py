@@ -60,7 +60,7 @@ g.imap.close()'''
 
 
 # Open database connection
-db = MySQLdb.connect("54.225.226.195",db="causbuzz_production",user="root",passwd="dev123" )
+db = MySQLdb.connect(configMap['host'],db=configMap['db'],user=configMap['user'],passwd=configMap['dbpass'] )
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
